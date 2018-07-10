@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if paddlers %}
+    <ul>
+    {% for p in paddlers %}
+        <li><a href="/roster/{{ p.first_name }}/">{{ p }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No paddlers</p>
+{% endif %}
+</body>
+</html>
